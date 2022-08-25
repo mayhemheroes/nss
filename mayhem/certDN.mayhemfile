@@ -1,0 +1,4 @@
+project: PROJECT
+target: certDN
+cmds:
+- cmd: /out/certDN
