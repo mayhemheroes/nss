@@ -15,6 +15,7 @@
 ################################################################################
 
 FROM gcr.io/oss-fuzz-base/base-builder
+RUN sed -i s/snapshot.ubuntu.com/archive.ubuntu.com/g /etc/apt/sources.list 2>/dev/null || true
 RUN apt-get update && apt-get install -y make mercurial zlib1g-dev gyp ninja-build libssl-dev python
 
 RUN hg clone https://hg.mozilla.org/projects/nspr nspr
